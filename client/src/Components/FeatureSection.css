@@ -1,0 +1,25 @@
+.welcome-container{
+    text-align: center;
+}
+
+.feature-section {
+    padding: 20px 0;
+    background-image: linear-gradient(#B2FEFA,#0ED2F7);
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .feature-card {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .feature-card img {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }

@@ -1,0 +1,55 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Poppins:ital,wght@1,600&family=Sriracha&display=swap');
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(#6190E8,#1CB5E0);
+    font-family: 'Sriracha',sans-serif;
+    font-size:larger;
+    font-style:italic;
+    font-weight: 500;
+    padding: 15px 30px; /* Increased padding for more space */
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 10px; /* Increased gap between items for better spacing */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 14px; /* Added padding for better click area */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+  }
+  
+  .nav-links a:hover {
+    background-color: #414758; /* Soft hover effect with lighter color */
+    color: #e0e0e0;
+  }
+
+  .logout-link {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 6px 12px;
+    background-color: #3a3add; /* Background color for logout */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .logout-link:hover {
+    background-color: #6a0fcb;
+  }
+  
+  
