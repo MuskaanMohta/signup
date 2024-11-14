@@ -16,7 +16,7 @@ app.use(cors({
 app.use(cookieParser())
 app.use('/auth',UserRouter)
 app.use("/api/bank", BankRouter);
-mongoose.connect('mongodb://127.0.0.1:27017/authentication')
+mongoose.connect(process.env.MONGODB_URI)
 app.use('/api/bank-details', BankRouter);
 app.listen(process.env.PORT,()=>{
     console.log("Server is running")
