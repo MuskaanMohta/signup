@@ -2,25 +2,18 @@ import React, { useState } from "react"
 import '../App.css'
 import Axios from 'axios'
 import {Link, useNavigate} from "react-router-dom"
-import ReCAPTCHA from 'react-google-recaptcha';
+
 const Signup = () => {
     const [username, setUsername] = useState('')
     const[fullname,setFullname]=useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [password, setPassword] = useState('')
-    const [captchaVerified, setCaptchaVerified] = useState(false);
-
+    
     const navigate = useNavigate()
-    const handleCaptchaChange = (value) => {
-        setCaptchaVerified(!!value); // Ensures captcha is verified
-    };
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (!captchaVerified) {
-            alert("Please complete the captcha.");
-            return;
-        }
+        
         Axios.post('http://localhost:3000/auth/signup', {
             username,
             fullname,
@@ -61,10 +54,7 @@ const Signup = () => {
                 <input type="password" placeholder="*******"
                     onChange={(e) => setPassword(e.target.value)} />
 
-                <ReCAPTCHA
-                    sitekey="6LfzznoqAAAAALnufCLFqYgy5roRSOEziFXV-RiX"
-                    onChange={handleCaptchaChange}
-                />
+                
                 <button type="submit">Sign Up</button>
                 <p>Already have an Account? <Link to="/login">Login</Link></p> 
             </form>
